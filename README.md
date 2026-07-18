@@ -51,5 +51,21 @@ This project provides a digital platform to showcase steel products, manage prod
 
 ### 1. Clone Repository
 
+### Environment Variables
+PORT=5000
+MONGO_URL=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+Author
+
+Sahil Chandla
+
+MERN Stack Developer
+
 ```bash
+
 git clone https://github.com/sahilchandla/chandla_steel_works.git
