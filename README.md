@@ -46,3 +46,10 @@ This project provides a digital platform to showcase steel products, manage prod
 - Postman (API Testing)
 
 ## Project Structure
+
+## Installation and Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/sahilchandla/chandla_steel_works.git
