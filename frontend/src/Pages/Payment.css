@@ -1,0 +1,21 @@
+.list-group-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: translateY(-3px);
+}
+
+.card {
+    backdrop-filter: blur(10px);
+}
+
+.badge-color{
+    color:orange;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}

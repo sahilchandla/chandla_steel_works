@@ -1,0 +1,100 @@
+.about-page{
+    background-color: #111;
+    color: white;
+    min-height: 100vh;
+}
+
+.hero-section{
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://img.freepik.com/free-photo/construction-workers-welding-night_23-2151933424.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section p{
+    font-size: 25px;
+}
+
+.service-card{
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    transition: 0.3s;
+    height: 100%;
+    cursor: pointer;
+}
+
+.service-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px orange;
+}
+
+.service-card h2{
+    font-size: 50px;
+}
+
+.service-card h4{
+    color: orange;
+    margin-bottom: 15px;
+}
+
+.service-card p{
+    color: #ccc;
+}
+
+
+
+.stats-section{
+    background-color: #1a1a1a;
+    padding: 20px 20px;
+    margin-top: 50px;
+}
+
+.stats-section h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: orange;
+}
+
+.stats-section p{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+.products-links{
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.products-links:hover{
+    background-color: orange;
+    color: black;
+}
+
+/* MOBILE */
+
+@media(max-width:930px){
+    .hero-section p{
+        font-size: 18px;
+    }
+
+    .service-card h2{
+        font-size: 30px;
+    }
+
+    .stats-section h1{
+        font-size: 40px;
+    }
+    .company-description{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .products-linksBtn {
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,50 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.product-form{
+    height: 83vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-feild{
+    height: auto;
+    box-shadow: 0 0 10px gray;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    width: 350px;
+    padding: 15px;
+}
+
+.product-feild input[type="text"],
+.product-feild .data-lists
+{
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+}
+
+.product-feild button {
+    width: 100%;
+    padding: 8px 20px;
+    background: linear-gradient(90deg, #000000, #1f2937);
+    color: #ffffff;
+    border: none;
+    font-size: larger;
+    border-radius: 2px;
+    cursor: pointer;
+}

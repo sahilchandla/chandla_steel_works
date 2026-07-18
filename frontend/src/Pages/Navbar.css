@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    background: linear-gradient(90deg, #000000, #1f2937);
+    border-bottom: 2px solid #FCA311;
+    /* border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(90deg, #4f46e5, #9333ea); */
+    /* background: linear-gradient(90deg, #ec4899, #38bdf8); */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* height: 60px; */
+    width: 100%;
+    z-index: 1;
+}
+
+nav .list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav .list a {
+    text-decoration: none;
+    color: #F9FAFB;
+    font-size: 25px;
+    text-shadow: 0 0 5px rgb(68, 68, 68);
+}
+.query-box{
+    position: absolute;
+    right: 90px;
+    /* left: 5px; */
+    top: 50px;
+    background: linear-gradient(30deg, #000000, #1f2937);
+    width: 220px;
+    padding: 8px;
+    /* border: 1px solid orange; */
+    border-radius: 5px;
+}
+.open-query-box{
+    /* display: block; */
+    background: none;
+    border: none;
+    /* cursor: pointer; */
+    /* font-size: 25px; */
+    color: white;
+}
+
+.navbar-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(270deg, #000000, #1f2937);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+.brand-top{
+    font-family:'Playfair Display', serif;
+}
+
+.brand-logo{
+    position: relative;
+    overflow: hidden;
+    line-height: 1;
+}
+
+.brand-top{
+    position: relative;
+    margin: 0;
+    color: white;
+    font-size: clamp(25px,2vw,50px);
+    font-weight: 900;
+    opacity: 0;
+    transform: translateX(-250px);
+    animation: chandlaEntry 1.2s ease forwards;
+    animation-delay: .6s;
+}
+
+.brand-bottom{
+    position: relative;
+    margin: 0;
+    color: #FCA311;
+    letter-spacing: 8px;
+    font-size: clamp(10px,1vw,16px);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(-250px);
+    animation: steelEntry 1s ease forwards;
+}
+
+.brand-top::before,
+.brand-bottom::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -180px;
+    width: 150px;
+    height: 8px;
+    transform: translateY(-50%);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
+    filter: blur(6px);
+    opacity: 0;
+}
+
+.brand-bottom::before{
+    animation: trailMove 1s ease forwards;
+}
+
+.brand-top::before{
+    animation: trailMove 1.2s ease forwards;
+    animation-delay: .6s;
+}
+
+@keyframes steelEntry{
+    0%{
+        opacity:0;
+        transform:translateX(-250px);
+        filter:blur(10px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+        filter:blur(0);
+    }
+}
+
+@keyframes chandlaEntry{
+    0%{
+        opacity:0;
+        transform:translateX(-250px);
+        filter:blur(12px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+        filter:blur(0);
+    }
+}
+
+@keyframes trailMove{
+    0%{
+        left:-200px;
+        opacity:1;
+    }
+    100%{
+        left:50px;
+        opacity:0;
+    }
+}
+
+/* NAV LINKS */
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.list li a{
+    text-decoration: none;
+    color: white;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.list li a:hover{
+    color: #FCA311;
+}
+
+/* TOGGLER */
+
+.menu-icon{
+    display: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+/* QUERY BOX */
+
+.query-box{
+    position: absolute;
+
+    top: 40px;
+    right: 0;
+
+    background: #111;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    min-width: 180px;
+}
+
+/* MOBILE */
+
+@media(max-width:930px){
+
+    .menu-icon{
+        display: block;
+    }
+
+    .list{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        padding: 25px 0;
+        gap: 20px;
+        transition: 0.4s;
+    }
+
+    .list.active{
+        left: 0;
+    }
+
+    .logo-link h2{
+        font-size: 22px;
+    }
+
+    .logo-img{
+        width: 42px;
+        height: 42px;
+    }
+}

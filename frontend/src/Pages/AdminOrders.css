@@ -1,0 +1,92 @@
+/* Page Background */
+body{
+    background-color:#f8f9fa;
+    
+}
+
+/* Heading */
+.admin-title{
+    color:#0d6efd;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+/* Order Card */
+.card{
+    transition:0.3s ease;
+    border-radius:15px;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Card Header */
+.card-header{
+    border-top-left-radius:15px !important;
+    border-top-right-radius:15px !important;
+}
+
+/* Product Image */
+.order-product-img{
+    width:110px;
+    height:110px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* Product Card */
+.bg-light{
+    border-radius:12px;
+}
+
+/* Buttons */
+.btn{
+    font-weight:600;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.02);
+}
+
+/* Customer Details */
+.card-body p{
+    margin-bottom:8px;
+}
+
+/* Status Badge */
+.badge{
+    font-size:14px;
+    padding:8px 12px;
+}
+
+/* Footer */
+.card-footer{
+    border-bottom-left-radius:15px !important;
+    border-bottom-right-radius:15px !important;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .order-product-img{
+        width:80px;
+        height:80px;
+    }
+
+    .card-body h6{
+        font-size:16px;
+    }
+
+    .card-body p{
+        font-size:14px;
+    }
+
+    .btn{
+        font-size:14px;
+    }
+
+}
