@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
 import { addItem } from "../redux/CartSlice.js";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 function ProductImgDetails() {
 
@@ -97,7 +98,7 @@ function ProductImgDetails() {
                     />
 
                 </div>
-                
+                <br />
 
                 {/* RIGHT SIDE DETAILS */}
 
@@ -110,6 +111,20 @@ function ProductImgDetails() {
                     <h3 className="text-success">
                         ₹ {product.price}
                     </h3>
+
+                    <div className="d-flex align-items-center mb-3">
+                        <span className="me-2">
+                            <FaStar className="text-warning" />
+                            <FaStar className="text-warning" />
+                            <FaStar className="text-warning" />
+                            <FaStar className="text-warning" />
+                            <FaStarHalfAlt className="text-warning" />
+                        </span>
+
+                        <span className="text-muted">
+                            4.5 (120 Reviews)
+                        </span>
+                    </div>
 
                     <p>
                         <strong>Company :</strong>
