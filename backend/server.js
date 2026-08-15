@@ -26,6 +26,13 @@ app.use("/api/product",productRoutes)
 app.use("/api/orders", orderRoutes)
 app.use("/api",contactRoutes)
 
-app.listen(process.env.PORT,()=>{
-    console.log("server run")
-})
+app.get("/", (req, res) => {
+    res.send("Chandla Steel Works Backend is Running!");
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log("server run");
+});
+
