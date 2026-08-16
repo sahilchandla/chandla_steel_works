@@ -8,7 +8,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import cors from 'cors';
-app.use(cors({origin:"https://chandla-steel-works-1.onrender.com"}));
+
+app.use(cors({
+    origin: "https://chandla-steel-works-1.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 import "./db/conn.js";
 
