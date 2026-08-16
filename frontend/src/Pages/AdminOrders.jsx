@@ -13,7 +13,7 @@ function AdminOrders() {
 
             // console.log("Token 👉", token);
 
-            const res = await axios.get("https://chandla-steel-works-1.onrender.com/api/orders", {
+            const res = await axios.get("https://chandla-steel-works.onrender.com/api/orders", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -40,7 +40,7 @@ function AdminOrders() {
             const token = JSON.parse(localStorage.getItem("token"));
 
             await axios.put(
-                `https://chandla-steel-works-1.onrender.com/api/orders/update/${id}`,
+                `https://chandla-steel-works.onrender.com/api/orders/update/${id}`,
                 { status },
                 {
                     headers: {
