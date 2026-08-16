@@ -9,14 +9,15 @@ dotenv.config();
 
 import cors from 'cors';
 
+import cors from 'cors';
+
 app.use(cors({
     origin: [
         "http://localhost:5173",
         "https://chandla-steel-works-1.onrender.com"
     ],
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.options("*", cors());
