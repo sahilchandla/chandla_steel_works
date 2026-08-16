@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import cors from 'cors';
-app.use(cors({origin:"http://localhost:5173"}));
+app.use(cors({origin:"https://chandla-steel-works-1.onrender.com"}));
 
 import "./db/conn.js";
 
