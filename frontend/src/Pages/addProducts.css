@@ -8,22 +8,24 @@ body {
 }
 
 
-.product-form{
-    height: 83vh;
+.product-form {
+    min-height: 83vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
 }
 
-.product-feild{
+.product-feild {
     height: auto;
     box-shadow: 0 0 10px gray;
-    display:flex ;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 1.5;
     width: 350px;
+    max-width: 90%;
     padding: 15px;
 }
 
